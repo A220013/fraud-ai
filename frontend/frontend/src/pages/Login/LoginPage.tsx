@@ -1,6 +1,4 @@
 // src/pages/Login/LoginPage.tsx
-import React from 'react';
-
 const LoginPage = () => {
   return (
     <div>
