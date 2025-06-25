@@ -40,16 +40,17 @@ An AI-powered academic advising system for prospective and current students at U
 The easiest way to run the application is using Docker:
 
 ```bash
-# Clone the repository
+Clone the repository
 git clone <repository-url>
 cd intelligent-academic-advisor
 
-# Start the application with Docker
+Start the application with Docker
 docker-compose up --build
 ```
 
 The application will be available at:
 - Frontend: `http://localhost:5173`
+- Chat Interface: `http://localhost:5173/chat`
 - Backend API: `http://localhost:3001`
 
 To stop the application:
@@ -71,16 +72,16 @@ cd intelligent-academic-advisor
 ```bash
 cd backend
 
-# Install dependencies
+Install dependencies
 npm install
 
-# Create environment file
+Create environment file
 cp env.example .env
 
-# Edit .env file with your OpenAI API key
-# OPENAI_API_KEY=your_openai_api_key_here
+Edit .env file with your OpenAI API key
+OPENAI_API_KEY=your_openai_api_key_here
 
-# Start development server
+Start development server
 npm run dev
 ```
 
@@ -91,14 +92,15 @@ The backend will be available at `http://localhost:3001`
 ```bash
 cd frontend/frontend
 
-# Install dependencies
+Install dependencies
 npm install
 
-# Start development server
+Start development server
 npm run dev
 ```
 
 The frontend will be available at `http://localhost:5173`
+Chat interface: `http://localhost:5173/chat`
 
 ## 🔧 Configuration
 
@@ -128,7 +130,7 @@ VITE_USE_MOCK_SERVICE=false
 
 ### For Students
 
-1. **Open the Application**: Navigate to `http://localhost:5173`
+1. **Open the Chat Interface**: Navigate to `http://localhost:5173/chat`
 2. **Start a Conversation**: Type your academic questions in the chat interface
 3. **Get AI Guidance**: Receive personalized advice on:
    - Course selection and planning
@@ -181,7 +183,7 @@ npm test
 
 ### Docker Production
 ```bash
-# Build and run in production mode
+Build and run in production mode
 docker-compose -f docker-compose.prod.yml up --build -d
 ```
 
@@ -198,7 +200,7 @@ npm start
 ```bash
 cd frontend/frontend
 npm run build
-# Deploy dist/ folder to your hosting service
+Deploy dist/ folder to your hosting service
 ```
 
 ## 🤝 Contributing
