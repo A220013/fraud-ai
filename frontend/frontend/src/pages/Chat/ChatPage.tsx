@@ -1,11 +1,16 @@
-// src/pages/Chat/DashboardPage.tsx
-import React from 'react';
+import { Link } from 'react-router-dom';
+import ChatInterface from '../../components/ChatInterface';
+import './ChatPage.css';
 
 const ChatPage = () => {
   return (
-    <div>
-      <h1>ChatPage</h1>
-      {/* TODO: ChatPage*/}
+    <div className="chat-page">
+      <div className="chat-page-header">
+        <Link to="/dashboard" className="back-button">
+          ← Back to Dashboard
+        </Link>
+      </div>
+      <ChatInterface />
     </div>
   );
 };

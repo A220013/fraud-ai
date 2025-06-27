@@ -1,6 +1,4 @@
 // src/pages/Register/RegisterPage.tsx
-import React from 'react';
-
 const RegisterPage = () => {
   return (
     <div>
