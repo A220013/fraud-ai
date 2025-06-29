@@ -4,7 +4,7 @@ import OpenAI from 'openai';
 const router = express.Router();
 
 const openai = new OpenAI({
-  apiKey: 'sk-8bd7ab671fab4da88f5111c671ea1cad',
+  apiKey: 'key',
   baseURL: 'https://api.deepseek.com'
 });
 
