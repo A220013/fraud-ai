@@ -100,8 +100,8 @@ const ChatInterface: React.FC = () => {
       </div>
 
       <div className="chat-header">
-        <h2>🎓 UNSW Academic Advisor</h2>
-        <p>Ask me anything about your studies, courses, or academic planning!</p>
+        <h2>🛡️ Anti-Fraud AI Assistant</h2>
+        <p>Ask me anything about fraud prevention, identification, and protection!</p>
       </div>
 
       <div className="messages-container">
@@ -109,16 +109,17 @@ const ChatInterface: React.FC = () => {
           <div className="welcome-message">
             <div className="assistant-message">
               <div className="message-content">
-                <p>👋 Hello! I'm your AI academic advisor for UNSW.</p>
+                <p>👋 Hello! I'm your AI anti-fraud assistant.</p>
                 <p>I can help you with:</p>
                 <ul>
-                  <li>📚 Course selection and planning</li>
-                  <li>🎯 Degree requirements</li>
-                  <li>📖 Study strategies</li>
-                  <li>🏛️ Campus resources</li>
-                  <li>💼 Career guidance</li>
+                  <li>🔍 Fraud identification and recognition</li>
+                  <li>🛡️ Prevention measures and best practices</li>
+                  <li>🚨 Emergency response procedures</li>
+                  <li>🌐 Safe online behavior guidelines</li>
+                  <li>📞 Reporting fraud incidents</li>
+                  <li>🔒 Protecting personal information</li>
                 </ul>
-                <p>What would you like to know about your academic journey?</p>
+                <p>What would you like to know about fraud prevention?</p>
               </div>
             </div>
           </div>
@@ -164,7 +165,7 @@ const ChatInterface: React.FC = () => {
             value={inputMessage}
             onChange={(e) => setInputMessage(e.target.value)}
             onKeyPress={handleKeyPress}
-            placeholder="Ask about courses, degree requirements, study tips..."
+            placeholder="Ask about fraud prevention, identification, safety tips..."
             disabled={isLoading}
             rows={1}
             className="message-input"

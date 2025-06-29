@@ -1,14 +1,14 @@
 {
-  "name": "backend",
+  "name": "anti-fraud-ai-backend",
   "version": "1.0.0",
-  "description": "cd backend\r pip install -r requirements.txt\r uvicorn main:app --reload",
+  "description": "Backend API for Anti-Fraud AI Assistant - A comprehensive fraud prevention and protection system",
   "main": "index.js",
   "scripts": {
     "dev": "ts-node-dev --respawn --transpile-only src/index.ts",
     "build": "tsc",
     "start": "node dist/index.js"
   },
-  "keywords": [],
+  "keywords": ["anti-fraud", "ai", "security", "fraud-prevention", "chatbot"],
   "author": "",
   "license": "ISC",
   "dependencies": {

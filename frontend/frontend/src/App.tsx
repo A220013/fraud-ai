@@ -5,12 +5,14 @@ import ChatPage from './pages/Chat/ChatPage';
 import LoginPage from './pages/Login/LoginPage';
 import RegisterPage from './pages/Register/RegisterPage';
 import NotFound from './pages/NotFound';
+import Navbar from './components/Navbar';
 import './App.css';
 
 function App() {
   return (
     <Router>
       <div className="App">
+        <Navbar />
         <main className="main-content">
           <Routes>
             <Route path="/" element={<Navigate to="/dashboard" replace />} />
