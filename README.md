@@ -1,7 +1,3 @@
-Here's the English version of the Anti-Fraud AI Assistant project description, updated to reflect the use of **DeepSeek**:
-
------
-
 ## Anti-Fraud AI Assistant (Powered by DeepSeek)
 
 This project is a powerful **AI-powered anti-fraud Q\&A system** designed to help users identify and prevent various types of fraud. It provides intelligent anti-fraud guidance, including common fraud type identification, prevention measures, emergency response procedures, and more.
