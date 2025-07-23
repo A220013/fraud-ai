@@ -1,261 +1,282 @@
-# Anti-Fraud AI Assistant
+Here's the English version of the Anti-Fraud AI Assistant project description, updated to reflect the use of **DeepSeek**:
 
-An AI-powered anti-fraud Q&A system designed to help users identify and prevent various types of fraud. This system provides intelligent anti-fraud guidance, including common fraud type identification, prevention measures, emergency response procedures, and more.
+-----
 
-## 🚀 Features
+## Anti-Fraud AI Assistant (Powered by DeepSeek)
 
-- **AI-Powered Chat Interface**: Real-time conversation with an anti-fraud AI assistant
-- **Comprehensive Anti-Fraud Guidance**: Fraud identification, prevention measures, emergency response
-- **Real-time Connection Status**: Visual indicator of AI service availability
-- **Responsive Design**: Works seamlessly on desktop and mobile devices
-- **Error Handling**: Robust error handling with user-friendly messages
-- **Fallback Mode**: Graceful degradation to mock service when backend is unavailable
+This project is a powerful **AI-powered anti-fraud Q\&A system** designed to help users identify and prevent various types of fraud. It provides intelligent anti-fraud guidance, including common fraud type identification, prevention measures, emergency response procedures, and more.
 
-## 🛠️ Technology Stack
+-----
 
-### Frontend
-- **React 18** with TypeScript
-- **Vite** for fast development and building
-- **Axios** for API communication
-- **CSS3** with modern animations and responsive design
+### 🚀 Features
 
-### Backend
-- **Node.js** with Express
-- **TypeScript** for type safety
-- **OpenAI API** for AI-powered responses
-- **Helmet** for security headers
-- **Rate limiting** for API protection
+  * **AI-Powered Chat Interface**: Real-time conversation with an anti-fraud AI assistant.
+  * **Comprehensive Anti-Fraud Guidance**: Covers fraud identification, prevention measures, and emergency response.
+  * **Real-time Connection Status**: A visual indicator of AI service availability.
+  * **Responsive Design**: Works seamlessly on both desktop and mobile devices.
+  * **Error Handling**: Robust error handling with user-friendly messages.
+  * **Fallback Mode**: Graceful degradation to a mock service when the backend is unavailable, ensuring continuous service.
 
-## 📋 Prerequisites
+-----
 
-- Docker and Docker Compose (recommended)
-- OR Node.js 18+ and npm (for local development)
-- OpenAI API key (for AI functionality)
-- Git
+### 🛠️ Technology Stack
 
-## 🚀 Quick Start
+  * **Frontend**
+      * **React 18** with **TypeScript**: For fast development and building the user interface.
+      * **Vite**: For a quick development and build experience.
+      * **Axios**: For API communication.
+      * **CSS3**: With modern animations and responsive design.
+  * **Backend**
+      * **Node.js** with **Express**: For building the server-side application.
+      * **TypeScript**: For type safety.
+      * **DeepSeek API**: The core for AI-powered responses, leveraging DeepSeek's models to provide intelligent anti-fraud advice.
+      * **Helmet**: For security headers.
+      * **Rate limiting**: For API protection against abuse.
 
-### Option 1: Docker (Recommended)
+-----
 
-The easiest way to run the application is using Docker:
+### 📋 Prerequisites
 
-```bash
-# Clone the repository
-git clone <repository-url>
-cd intelligent-academic-advisor
+To run this application, you'll need:
 
-# Start the application with Docker
-docker-compose up --build
-```
+  * **Docker and Docker Compose** (recommended for the easiest setup)
+  * **OR Node.js 18+ and npm** (for local development)
+  * **DeepSeek API key** (essential for AI functionality)
+  * **Git**
 
-The application will be available at:
-- Frontend: `http://localhost:5173`
-- Chat Interface: `http://localhost:5173/chat`
-- Backend API: `http://localhost:3001`
+-----
 
-To stop the application:
-```bash
-docker-compose down
-```
+### 🚀 Quick Start
 
-### Option 2: Local Development
+You have two options to get the application up and running:
 
-#### 1. Clone the Repository
+#### Option 1: Docker (Recommended)
 
-```bash
-git clone <repository-url>
-cd intelligent-academic-advisor
-```
+This is the easiest way to run the application:
 
-#### 2. Backend Setup
+1.  **Clone the repository**:
+    ```bash
+    git clone <repository-url>
+    cd intelligent-academic-advisor
+    ```
+2.  **Start the application with Docker**:
+    ```bash
+    docker-compose up --build
+    ```
+    The application will be available at:
+      * **Frontend**: `http://localhost:5173`
+      * **Chat Interface**: `http://localhost:5173/chat`
+      * **Backend API**: `http://localhost:3001`
+3.  **To stop the application**:
+    ```bash
+    docker-compose down
+    ```
 
-```bash
-cd backend
+#### Option 2: Local Development
 
-# Install dependencies
-npm install
+If you prefer setting up the environment locally:
 
-# Create environment file
-cp env.example .env
+1.  **Clone the Repository**:
+    ```bash
+    git clone <repository-url>
+    cd intelligent-academic-advisor
+    ```
+2.  **Backend Setup**:
+    ```bash
+    cd backend
+    npm install # Install dependencies
+    cp env.example .env # Create environment file
+    ```
+    Edit the `.env` file with your **DeepSeek API key**:
+    ```
+    DEEPSEEK_API_KEY=your_deepseek_api_key_here
+    ```
+    Start the development server:
+    ```bash
+    npm run dev
+    ```
+    The backend will be available at `http://localhost:3001`.
+3.  **Frontend Setup**:
+    ```bash
+    cd frontend/frontend
+    npm install # Install dependencies
+    npm run dev # Start development server
+    ```
+    The frontend will be available at `http://localhost:5177`, with the chat interface at `http://localhost:5173/chat`.
 
-# Edit .env file with your OpenAI API key
-OPENAI_API_KEY=your_openai_api_key_here
+-----
 
-# Start development server
-npm run dev
-```
+### 🔧 Configuration
 
-The backend will be available at `http://localhost:3001`
+#### Environment Variables
 
-#### 3. Frontend Setup
+  * **Backend (.env)**
+      * `PORT=3001`: The port for the backend server.
+      * `NODE_ENV=development`: Sets the environment to development mode.
+      * `FRONTEND_URL=http://localhost:5173`: The URL of the frontend application.
+      * `DEEPSEEK_API_KEY=your_deepseek_api_key_here`: Your DeepSeek API key.
+  * **Frontend (.env)**
+      * `VITE_API_BASE_URL=http://localhost:3001/api`: The base URL for the backend API.
+      * `VITE_USE_MOCK_SERVICE=false`: Controls whether the mock service is used.
 
-```bash
-cd frontend/frontend
+#### DeepSeek API Setup
 
-# Install dependencies
-npm install
+1.  Sign up for a DeepSeek account and generate an API key.
+2.  Add this API key to your backend `.env` file.
 
-# Start development server
-npm run dev
-```
+-----
 
-The frontend will be available at `http://localhost:5173`
-Chat interface: `http://localhost:5173/chat`
+### 🎯 Usage
 
-## 🔧 Configuration
+For users, interacting with the system is straightforward:
 
-### Environment Variables
+1.  **Open the Chat Interface**: Navigate to `http://localhost:5173/chat`.
+2.  **Start a Conversation**: Type your anti-fraud questions into the chat interface.
+3.  **Get AI Guidance**: DeepSeek AI will provide personalized advice on:
+      * Common fraud type identification
+      * Prevention measures and tips
+      * Emergency response procedures
+      * Safe internet Browse guidelines
+      * Reporting channels information
 
-#### Backend (.env)
-```env
-PORT=3001
-NODE_ENV=development
-FRONTEND_URL=http://localhost:5173
-OPENAI_API_KEY=your_openai_api_key_here
-```
+**Example Questions**:
 
-#### Frontend (.env)
-```env
-VITE_API_BASE_URL=http://localhost:3001/api
-VITE_USE_MOCK_SERVICE=false
-```
+  * "How to identify phishing scams?"
+  * "What should I do if I receive a suspicious phone call?"
+  * "How to avoid fraud when shopping online?"
+  * "What are the characteristics of investment fraud?"
+  * "What should I do if my personal information is compromised?"
 
-### OpenAI API Setup
+-----
 
-1. Sign up for an OpenAI account at [https://platform.openai.com](https://platform.openai.com)
-2. Generate an API key in your account settings
-3. Add the API key to your backend `.env` file
+### 🔄 System Flow
 
-## 🎯 Usage
+1.  **User Input**: The user types a question in the chat interface.
+2.  **Frontend Processing**: The message is sent to the backend API.
+3.  **AI Processing**: The backend calls the **DeepSeek API** with the anti-fraud context.
+4.  **Response Generation**: DeepSeek AI generates personalized anti-fraud advice.
+5.  **Response Display**: The answer is shown in the chat interface.
+6.  **Fallback Handling**: If the backend is unavailable, the mock service provides responses.
 
-### For Users
+-----
 
-1. **Open the Chat Interface**: Navigate to `http://localhost:5173/chat`
-2. **Start a Conversation**: Type your anti-fraud questions in the chat interface
-3. **Get AI Guidance**: Receive personalized advice on:
-   - Common fraud type identification
-   - Prevention measures and tips
-   - Emergency response procedures
-   - Safe internet browsing guidelines
-   - Reporting channels information
-
-### Example Questions
-
-- "How to identify phishing scams?"
-- "What should I do if I receive a suspicious phone call?"
-- "How to avoid fraud when shopping online?"
-- "What are the characteristics of investment fraud?"
-- "What should I do if my personal information is compromised?"
-
-## 🔄 System Flow
-
-1. **User Input**: User types a question in the chat interface
-2. **Frontend Processing**: Message is sent to the backend API
-3. **AI Processing**: Backend calls OpenAI API with anti-fraud context
-4. **Response Generation**: AI generates personalized anti-fraud advice
-5. **Response Display**: Answer is shown in the chat interface
-6. **Fallback Handling**: If backend is unavailable, mock service provides responses
-
-## 🛡️ Error Handling
+### 🛡️ Error Handling
 
 The system includes comprehensive error handling:
 
-- **Network Errors**: Automatic fallback to mock service
-- **API Errors**: User-friendly error messages
-- **Rate Limiting**: Protection against API abuse
-- **Connection Status**: Visual indicator of service availability
+  * **Network Errors**: Automatic fallback to the mock service.
+  * **API Errors**: User-friendly error messages.
+  * **Rate Limiting**: Protection against API abuse.
+  * **Connection Status**: Visual indicator of service availability.
 
-## 🧪 Testing
+-----
 
-### Backend Testing
-```bash
-cd backend
-npm test
-```
+### 🧪 Testing
 
-### Frontend Testing
-```bash
-cd frontend/frontend
-npm test
-```
+The project includes tests for both backend and frontend:
 
-## 📦 Production Deployment
+  * **Backend Testing**:
+    ```bash
+    cd backend
+    npm test
+    ```
+  * **Frontend Testing**:
+    ```bash
+    cd frontend/frontend
+    npm test
+    ```
 
-### Docker Production
+-----
+
+### 📦 Production Deployment
+
+#### Docker Production
+
 ```bash
 # Build and run in production mode
 docker-compose -f docker-compose.prod.yml up --build -d
 ```
 
-### Manual Deployment
+#### Manual Deployment
 
-#### Backend Deployment
-```bash
-cd backend
-npm run build
-npm start
-```
+  * **Backend Deployment**:
+    ```bash
+    cd backend
+    npm run build
+    npm start
+    ```
+  * **Frontend Deployment**:
+    ```bash
+    cd frontend/frontend
+    npm run build
+    # Deploy dist/ folder to your web server
+    ```
 
-#### Frontend Deployment
-```bash
-cd frontend/frontend
-npm run build
-# Deploy dist/ folder to your web server
-```
+-----
 
-## 🤝 Contributing
+### 🤝 Contributing
 
-Contributions are welcome! Please read [CONTRIBUTING.md](contributing.md) for details on how to participate in the project development.
+Contributions are welcome\! Please read `CONTRIBUTING.md` for details on how to participate in the project development.
 
-## 📄 License
+-----
 
-This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
+### 📄 License
 
-## 🆘 Support
+This project is licensed under the **MIT License** - see the `LICENSE` file for details.
+
+-----
+
+### 🆘 Support
 
 If you encounter issues or have suggestions, please:
 
-1. Check the [Issues](../../issues) page
-2. Create a new Issue
-3. Contact the project maintainers
+  * Check the **Issues** page.
+  * Create a new Issue.
+  * Contact the project maintainers.
 
-## ⚠️ Disclaimer
+-----
+
+### ⚠️ Disclaimer
 
 The anti-fraud advice provided by this system is for reference only and should not replace professional legal advice. When encountering suspicious fraud situations, please contact relevant law enforcement agencies or professional institutions for assistance.
 
-## 🔮 Future Enhancements
+-----
 
-- Multi-language support
-- Voice interaction capabilities
-- Integration with fraud reporting systems
-- Real-time fraud alert notifications
-- Advanced fraud pattern recognition
-- Mobile app development
+### 🔮 Future Enhancements
 
----
+Future enhancements planned for the project include:
 
-## 📝 Project Transformation Notes
+  * Multi-language support
+  * Voice interaction capabilities
+  * Integration with fraud reporting systems
+  * Real-time fraud alert notifications
+  * Advanced fraud pattern recognition
+  * Mobile app development
 
-This project was originally an academic advisor system for UNSW and has been transformed into an Anti-Fraud AI Assistant. The transformation included:
+-----
 
-### Changes Made:
-1. **System Prompt**: Updated from academic advising to anti-fraud guidance
-2. **UI/UX**: Changed theme from academic to security/fraud prevention
-3. **Content**: Replaced academic content with fraud prevention information
-4. **Navigation**: Updated navigation and routing for anti-fraud context
-5. **Mock Service**: Updated fallback responses for fraud-related queries
-6. **Documentation**: Updated all documentation to reflect the new purpose
+### 📝 Project Transformation Notes
 
-### Key Features Added:
-- Comprehensive fraud type identification
-- Prevention measures and best practices
-- Emergency contact information
-- Safety tips and guidelines
-- Modern, security-themed UI design
+This project was originally an academic advisor system for UNSW and has been transformed into an Anti-Fraud AI Assistant.
+
+**Changes Made**:
+
+  * **System Prompt**: Updated from academic advising to anti-fraud guidance.
+  * **UI/UX**: Changed the theme from academic to security/fraud prevention.
+  * **Content**: Replaced academic content with fraud prevention information.
+  * **Navigation**: Updated navigation and routing for anti-fraud context.
+  * **Mock Service**: Updated fallback responses for fraud-related queries.
+  * **Documentation**: Updated all documentation to reflect the new purpose.
+
+**Key Features Added**:
+
+  * Comprehensive fraud type identification
+  * Prevention measures and best practices
+  * Emergency contact information
+  * Safety tips and guidelines
+  * Modern, security-themed UI design
 
 The system now serves as a comprehensive tool for fraud prevention and protection, helping users identify and avoid various types of fraud while providing immediate guidance and resources.
-
----
 
 **Built with ❤️ for UNSW Students**
  
